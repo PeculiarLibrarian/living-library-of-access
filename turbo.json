@@ -3,23 +3,12 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**", "!**"]
     },
-
-    "build#@padi/config-eslint": {
-      "outputs": []
-    },
-
-    "build#@padi/config-ts": {
-      "outputs": []
-    },
-
     "test": {
       "dependsOn": ["build"]
     },
-
     "lint": {},
-
     "docker:build": {
       "dependsOn": ["build"]
     }
